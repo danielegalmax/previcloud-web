@@ -4,17 +4,15 @@ import { useEffect, useState } from 'react'
 import { Loader2, Download } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { DashboardLayout } from '@/components/DashboardLayout'
-
-const APK_URL =
-  'https://github.com/Nexlap/previcloud-mobile/releases/download/v1.0.0-beta/previcloud-android-1.0.0-beta.apk'
-const WINDOWS_INSTALLER_URL =
-  'https://github.com/Nexlap/previcloud-desktop/releases/download/v1.0.0/PreviCloud_1.0.0_x64-setup.exe'
-const MACOS_DMG_URL =
-  'https://github.com/Nexlap/previcloud-desktop/releases/download/v1.0.0/PreviCloud_1.0.0_aarch64.dmg'
-const IOS_TESTFLIGHT_URL = 'https://testflight.apple.com/join/RMpKNnCn'
-const VERSIONE_ANDROID = '1.0.0'
-const VERSIONE_WINDOWS = '1.0.0'
-const VERSIONE_MACOS = '1.0.0'
+import {
+  APK_URL,
+  IOS_TESTFLIGHT_URL,
+  MACOS_DMG_URL,
+  VERSIONE_ANDROID,
+  VERSIONE_MACOS,
+  VERSIONE_WINDOWS,
+  WINDOWS_INSTALLER_URL,
+} from '@/lib/downloadUrls'
 
 function AndroidIcon() {
   return (
